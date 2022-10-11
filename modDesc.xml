@@ -612,6 +612,82 @@ v1.0.2.0
  - 已更新以适用于1.4.1.0版本
  ]]>
  </cs>
+
+<tr><![CDATA[Düz yataklı römorklar için otomatik yükleme uzmanlığı. Bu gerçek temel oyun römorklarını ve dorselerini otomatik olarak değiştirir ve çiftliğinizdeki tüm yeni veya mevcut römork ve dorselere uygulanır. Kendi mod römorklarınıza veya paletlerinize ekleme talimatları için lütfen birlikte verilen "readme" dosyasına bakın.
+
+Özellikler:
+- Herhangi bir uyumlu palet tipini yükler (aşağıdaki listeye bakın)
+- Uyumlu herhangi bir römork ve dorseye otomatik olarak yüklenir (aşağıdaki listeye bakın)
+- Seçilen malzeme veya konteyner tipine göre Yükleme ve Boşaltma
+- Yüklemeyi yalnızca tam paletlerle sınırlayabilir
+- Karışık türleri sırayla yüklemek için 'TÜMÜ'nü seçin
+- En iyi paketleme verimliliği için karışık paletler boyut sırasına göre yüklenir
+- Oyuncu yayayken römorklarla etkileşime girebilir (bir araca bağlı olmasa bile)
+
+'KRONE Trailer Profi Liner' için Özel Özellikler
+- Yükleme/Boşaltma yalnızca bölmenin açık olduğu tarafta kullanılabilir
+- Forklitle doğrudan arkadan yükleme
+- Arka kapı ve bölme oyuncu yayaykende açılıp kapatılabilir
+
+Aşağıdaki kapsayıcı türleri için yapılandırıldı:
+- Büyük torbalar
+- Büyük çuval paletler
+- Euro Paletler
+- IBC Sıvı Tankları
+- Kare Balyalar
+- Patates Kutuları (mod gerektirir: Seed Potato Pack)
+Aşağıdaki römorklar için yapılandırılmıştır:
+- Brantner DD 24073/2 XXL (Balya Römorku)
+- Bremer Transportwagen TP 500 S
+- BÖCKMANN MH-AL 4320/35
+- BÖCKMANN KK 3018/27 H
+- Demco Steel Drop Deck
+- Farmtech DPW 1800 (standard)
+- Fliegl DTS 5.9
+- KRONE Trailer Profi Liner
+- Kröger PWO 24
+- LODE KING Renown Drop Deck
+- Welger DK 115 (Balya Römorku)
+- Salek ANS-1900 (Balya Römorku)
+
+Aşağıdaki araçlar için yapılandırılmıştır:
+- Lizard Pickup 1986
+- Lizard Pickup 2017
+- Mahindra Retriever
+- JohnDeer XUV865M
+- Kubota RTV-XG850
+- Kubota RTV-X1140
+- Tren (yalnızca araç vagonu)
+
+Changelog:
+v1.2.1.0
+- Bazen birden fazla yükleme bölgesi olan araçlarda meydana gelen LUA hatası düzeltmesi
+v1.2.0.0
+- Balya toplama modu eklendi
+- Yalnızca arkadan yükleme/boşaltma seçeneği eklendi
+- Paletlerin trene otomatik yüklenmesi için destek eklendi (yalnızca araç vagonu)
+- Otomatik yüklemenin ne zaman aktif olduğunu göstermek için mağaza yapılandırma sayfasına bir simge eklendi
+- Daha az hileli bir "otomatik yükleme ışığı" seçeneği için "manuel YüklemeOnly" global seçeneği eklendi
+- Yüklenen palet başına ücretlendirme için global seçenek eklendi, ör.: pricePerPallet="10"
+- Devre dışı bırakma seçeneği eklendi (küresel veya araç başına)
+- Kapalı/açıksa yükleme yok seçeneği eklendi (kapaklı treylerler için)
+- Birden fazla yükleme bölgesi eklendi (Alçak dorseler artık her iki alana da yüklenebilir)
+- Nesnelerin elle yüklenmesi eklendi (küçük nesneler veya süper güç)
+- Yeni konsol komutları eklendi (daha fazla ayrıntı için readme dosyasına bakın)
+- Olay dinleyicilerini doğru şekilde kaldırmak için uygulanan işlev (GtX)
+v1.1.0.0
+- Balyalar ve paletler için farklı istifleme yükseklikleri eklendi
+- Paletler, kütleye göre farklı yüksekliklerde istiflenir (ağırlık dağılımını iyileştirmek için)
+- Forklift ile iyileştirilmiş manuel yükleme ve boşaltma
+- KRONE ve low loader treylerlere manuel yandan yükleme eklendi
+- Kutu Römork araç tipi eklendi
+v1.0.2.0
+  - 1.4.1.0 ile çalışacak şekilde güncellendi
+]]>
+</tr>
+
+ÇEVİRİ - RedBeard54
+	    
     </description>
 	
 	<multiplayer supported="true" />
@@ -707,6 +783,7 @@ v1.0.2.0
 			<es>Autoload Universal</es>
 			<br>Autoload Universal</br>
 			<cs>通用自动装载</cs>
+			<tr>Evrensel Otomatik Yükleme </tr>
 		</text>
 		<text name="input_UNIVERSALAUTOLOAD_TOGGLE_LOADING">
 			<en>Toggle loading</en>
@@ -719,6 +796,8 @@ v1.0.2.0
 			<es>Cambiar carga/descarga</es>
 			<br>Carregar</br>
 			<cs>切换装载</cs>
+			<tr>Yüklemeyi aç / kapat</tr>
+
 		</text>
 		<text name="input_UNIVERSALAUTOLOAD_TOGGLE_BALE_COLLECTION">
 			<en>Automatic Bale Collection Mode</en>
@@ -731,6 +810,7 @@ v1.0.2.0
 			<es>Modo de recogida automática de balas</es>
 			<br>Modo de coleta automática de fardos</br>
 			<cs>自动捡包模式</cs>
+			<tr>Otomatik Balya Toplama Modu</tr>
 		</text>
 		<text name="input_UNIVERSALAUTOLOAD_UNLOAD_ALL">
 			<en>Unload</en>
@@ -743,6 +823,8 @@ v1.0.2.0
 			<es>Descargar</es>
 			<br>Descarregar</br>
 			<cs>卸载</cs>
+			<tr>Boşalt</tr>
+
 		</text>
 		<text name="input_UNIVERSALAUTOLOAD_TOGGLE_TIPSIDE">
 			<en>Toggle unloading side</en>
@@ -755,6 +837,8 @@ v1.0.2.0
 			<es>Cambiar lado de descarga</es>
 			<br>Lado p/ descarregar</br>
 			<cs>切换卸载端</cs>
+			<tr>Boşaltma tarafını değiştir</tr>
+			
 		</text>
 		<text name="input_UNIVERSALAUTOLOAD_TOGGLE_FILTER">
 			<en>Toggle loading filter</en>
@@ -767,6 +851,7 @@ v1.0.2.0
 			<es>Cambiar filtro de carga</es>
 			<br>Filtro de carregamento</br>
 			<cs>切换装载过滤器</cs>
+			<tr>Yükleme filtresini değiştir</tr>
 		</text>
 		<text name="input_UNIVERSALAUTOLOAD_TOGGLE_HORIZONTAL">
 			<en>Toggle horizontal loading</en>
@@ -779,6 +864,7 @@ v1.0.2.0
 			<es>Alternar carga horizontal</es>
 			<br>Alternar carregamento horizontal</br>
 			<cs>切换水平装载</cs>
+			<tr>Yatay yüklemeyi aç/kapat</tr>			
 		</text>
 		<text name="input_UNIVERSALAUTOLOAD_CYCLE_MATERIAL_FW">
 			<en>Change selected material type (next)</en>
@@ -791,6 +877,7 @@ v1.0.2.0
 			<es>Cambiar material seleccionado (siguiente)</es>
 			<br>Trocar tipo de material selecionado (prox.)</br>
 			<cs>改变选定的材料类型（下一个）</cs>
+			<tr>Seçilen malzeme türünü değiştir (sonraki)</tr>			
 		</text>
 		<text name="input_UNIVERSALAUTOLOAD_CYCLE_MATERIAL_BW">
 			<en>Change selected material type (previous)</en>
@@ -803,6 +890,7 @@ v1.0.2.0
 			<es>Cambiar material seleccionado (anterior)</es>
 			<br>Trocar tipo de material selecionado (ant.)</br>
 			<cs>改变选定的材料类型（上一个）</cs>
+			<tr>Seçilen malzeme türünü değiştir (önceki)</tr>
 		</text>
 		<text name="input_UNIVERSALAUTOLOAD_SELECT_ALL_MATERIALS">
 			<en>Select all material types</en>
@@ -815,6 +903,7 @@ v1.0.2.0
 			<es>Seleccionar todos los materiales</es>
 			<br>Seleciona todos os tipos de materiais</br>
 			<cs>选择所有材料类型</cs>
+			<tr>Tüm malzeme türlerini seç</tr>
 		</text>
 		<text name="input_UNIVERSALAUTOLOAD_CYCLE_CONTAINER_FW">
 			<en>Change selected container type (next)</en>
@@ -827,6 +916,7 @@ v1.0.2.0
 			<es>Cambiar tipo de contenedor (siguiente)</es>
 			<br>Trocar tipo de contêiner (prox.)</br>
 			<cs>改变选定的容器类型（下一个）</cs>
+			<tr>Seçili palet türünü değiştir (sonraki)</tr>
 		</text>
 		<text name="input_UNIVERSALAUTOLOAD_CYCLE_CONTAINER_BW">
 			<en>Change selected container type (previous)</en>
@@ -851,6 +941,7 @@ v1.0.2.0
 			<es>Todos los tipos de contenedor</es>
 			<br>Marca todos os tipos de contêiners</br>
 			<cs>选择所有容器类型</cs>
+			<tr>Tüm palet türlerini seç</tr>
 		</text>
 		<text name="input_UNIVERSALAUTOLOAD_TOGGLE_BELTS">
 			<en>Fasten/Unfasten tension belts</en>
@@ -863,6 +954,7 @@ v1.0.2.0
 			<es>Soltar/Sujetar cintas tensoras </es>
 			<br>Apertar/Soltar cintos de tensão</br>
 			<cs>拉紧/松开张力带</cs>
+			<tr>Gergi kayışlarını sabitleyin/açın</tr>
 		</text>
 		<text name="input_UNIVERSALAUTOLOAD_TOGGLE_DOOR">
 			<en>Open/Close rear door</en>
@@ -875,6 +967,7 @@ v1.0.2.0
 			<es>Abrir/Cerrar puerta trasera</es>
 			<br>Abrir/Fechar porta traseira</br>
 			<cs>打开/关闭后门</cs>
+			<tr>Arka kapıyı aç/kapat</tr>
 		</text>
 		<text name="input_UNIVERSALAUTOLOAD_TOGGLE_CURTAIN">
 			<en>Open/Close curtain side</en>
@@ -887,6 +980,7 @@ v1.0.2.0
 			<es>Abrir/Cerrar cortina lateral</es>
 			<br>Abrir/Fechar cortina lateral</br>
 			<cs>打开/关闭侧门</cs>
+			<tr>Dorse perdesini aç/kapat</tr>
 		</text>
 		<text name="input_UNIVERSALAUTOLOAD_TOGGLE_SHOW_DEBUG">
 			<en>Full debug mode</en>
@@ -898,7 +992,8 @@ v1.0.2.0
 			<pl>Pełny Tryb Debugu</pl>
 			<es>Modo debug completa</es>
 			<br>Modo de depuração total</br>
-			<cs>完全调试模式</cs>
+			<cs>完全调试模式</cs>			
+			<tr> Uzman hata ayıklama modu</tr>
 		</text>
 		<text name="input_UNIVERSALAUTOLOAD_TOGGLE_SHOW_LOADING">
 			<en>Simple debug mode</en>
@@ -911,6 +1006,8 @@ v1.0.2.0
 			<es>Modo debug simple</es>
 			<br>Modo de depuração simples</br>
 			<cs>简单调试模式</cs>
+			<tr>Basit hata ayıklama modu</tr>
+
 		</text>
 
 		<text name="warning_UNIVERSALAUTOLOAD_CLEAR_UNLOADING_AREA">
@@ -924,6 +1021,7 @@ v1.0.2.0
 			<es>Area de descarga bloqueada. Por favor despeje la zona.</es>
 			<br>Área de descarregamento bloqueada. Por favor, limpe a área de descarga.</br>
 			<cs>卸货区被占用。请清理卸货区。</cs>
+			<tr>Boşaltma alanı engellendi. Lütfen boşaltma alanının boş olduğuna emin olun.</tr>
 		</text>
 		<text name="warning_UNIVERSALAUTOLOAD_NO_OBJECTS_FOUND">
 			<en>No compatible goods are available for loading or unloading.</en>
@@ -936,6 +1034,7 @@ v1.0.2.0
 			<es>No hay productos compatibles para cargar o descargar.</es>
 			<br>Nenhum item compatível está disponível para cargarregar ou descarregar.</br>
 			<cs>没有相应的货物可供装货或卸货。</cs>
+			<tr>Yükleme veya boşaltmaya uygun yük bulunmamaktadır.</tr>
 		</text>
 		<text name="warning_UNIVERSALAUTOLOAD_UNABLE_TO_LOAD_OBJECT">
 			<en>Loading area is full. Unable to load any more items of this size.</en>
@@ -948,6 +1047,7 @@ v1.0.2.0
 			<es>Area de carga completa. No es posible cargar mas objetos de este tamaño.</es>
 			<br>A área de carregamento está cheia. Não foi possível carregar mais destes itens.</br>
 			<cs>已装满。无法再装载任何此尺寸的物品。</cs>
+			<tr>Yükleme alanı dolu. Bu boyutta daha fazla öğe yüklenemiyor.</tr>
 		</text>
 		<text name="warning_UNIVERSALAUTOLOAD_NO_LOADING_UNLESS_STATIONARY">
 			<en>No loading allowed unless stationary. Please come to a complete stop before loading the trailer.</en>
@@ -959,7 +1059,8 @@ v1.0.2.0
 			<pl>Nie można załadować podczas jazdy. Zatrzymaj pojazd zanim załadujesz.</pl>
 			<es>No es posible cargar en movimiento. Por favor detengase completamente antes de cargar el tráiler.</es>
 			<br>Nenhum carregamento permitido apenas parado. Por favor, pare completamente antes de carregar o trailer.</br>
-			<cs>运动中不允许装载。在装载拖车之前，请停车。</cs>
+			<cs>运动中不允许装载。在装载拖车之前，请停车。</cs>			
+			<tr>Sabit olmadıkça yüklemeye izin verilmez. Lütfen römorku yüklemeden önce tamamen durun.</tr>
 		</text>
 		<text name="universalAutoload_tipside">
 			<en>Unloading side</en>
@@ -972,6 +1073,7 @@ v1.0.2.0
 			<es>Lado de descarga</es>
 			<br>Lado de descarregamento</br>
 			<cs>卸货端</cs>
+			<tr>Boşaltma bölgesi</tr>
 		</text>
 		<text name="universalAutoload_left">
 			<en>Left</en>
@@ -984,6 +1086,7 @@ v1.0.2.0
 			<es>Izquierda</es>
 			<br>Esquerda</br>
 			<cs>左</cs>
+			<tr>Sol</tr>
 		</text>
 		<text name="universalAutoload_right">
 			<en>Right</en>
@@ -996,6 +1099,7 @@ v1.0.2.0
 			<es>Derecha</es>
 			<br>Direita</br>
 			<cs>右</cs>
+			<tr>Sağ</tr>
 		</text>
 		<text name="universalAutoload_none">
 			<en>None</en>
@@ -1008,6 +1112,7 @@ v1.0.2.0
 			<es>Ninguno</es>
 			<br>Nenhum</br>
 			<cs>空</cs>
+			<tr>Hiçbiri</tr>
 		</text>
 		<text name="universalAutoload_loadingFilter">
 			<en>Loading filter</en>
@@ -1020,6 +1125,7 @@ v1.0.2.0
 			<es>Filtro de carga</es>
 			<br>Filtro de carregamento</br>
 			<cs>装载过滤器</cs>
+			<tr>Yükleme filtresi</tr>
 		</text>
 		<text name="universalAutoload_loadingMethod">
 			<en>Loading Method</en>
@@ -1032,6 +1138,7 @@ v1.0.2.0
 			<es>Método de carga</es>
 			<br>Método de carregamento</br>
 			<cs>装载方法</cs>
+			<tr>Yükleme yöntemi</tr>
 		</text>
 		<text name="universalAutoload_layer">
 			<en>Layer</en>
@@ -1044,6 +1151,7 @@ v1.0.2.0
 			<es>Capa</es>
 			<br>Camada</br>
 			<cs>层数</cs>
+			<tr>Katman</tr>
 		</text>
 		<text name="universalAutoload_stack">
 			<en>Stack</en>
@@ -1056,6 +1164,7 @@ v1.0.2.0
 			<es>Pila</es>
 			<br>Pilha</br>
 			<cs>堆栈</cs>
+			<tr>Yığın</tr>
 		</text>
 		<text name="universalAutoload_fullOnly">
 			<en>Full only</en>
@@ -1068,6 +1177,7 @@ v1.0.2.0
 			<es>Solo completo</es>
 			<br>Completo apenas</br>
 			<cs>仅装满</cs>
+			<tr>Sadece dolu</tr>
 		</text>
 		<text name="universalAutoload_loadAny">
 			<en>Any</en>
@@ -1080,6 +1190,7 @@ v1.0.2.0
 			<es>Cualquiera</es>
 			<br>Qualquer</br>
 			<cs>任何类型</cs>
+			<tr>Herhangi</tr>
 		</text>
 		<text name="universalAutoload_startLoading">
 			<en>Start loading</en>
@@ -1092,6 +1203,7 @@ v1.0.2.0
 			<es>Empezar carga</es>
 			<br>Iniciar carregamento</br>
 			<cs>开始装载</cs>
+			<tr>Yüklemeye başlat</tr>
 		</text>
 		<text name="universalAutoload_stopLoading">
 			<en>Stop loading</en>
@@ -1104,6 +1216,7 @@ v1.0.2.0
 			<es>Detener carga</es>
 			<br>Parar carregamento</br>
 			<cs>停止装载</cs>
+			<tr>Yüklemeyi durdur</tr>
 		</text>
 		<text name="universalAutoload_unloadAll">
 			<en>Unload</en>
@@ -1115,7 +1228,8 @@ v1.0.2.0
 			<pl>Rozładuj</pl>
 			<es>Descargar</es>
 			<br>Descarregar</br>
-			<cs>卸载</cs>
+			<cs>卸载</cs>			
+			<tr>Boşalt</tr>
 		</text>
 		<text name="universalAutoload_baleMode">
 			<en>Auto-Bale Mode</en>
@@ -1128,6 +1242,7 @@ v1.0.2.0
 			<es>Modo Auto-Paca</es>
 			<br>Modo Auto Fardo</br>
 			<cs>自动打包模式</cs>
+			<tr>Otomatik Balya Modu</tr>
 		</text>
 		<text name="universalAutoload_enabled">
 			<en>Enabled</en>
@@ -1140,6 +1255,7 @@ v1.0.2.0
 			<es>Activado</es>
 			<br>Habilitado</br>
 			<cs>已启用</cs>
+			<tr>Etkin</tr>
 		</text>
 		<text name="universalAutoload_disabled">
 			<en>Disabled</en>
@@ -1152,6 +1268,7 @@ v1.0.2.0
 			<es>Desactivado</es>
 			<br>Deficiente</br>
 			<cs>已停用</cs>
+			<tr>Devre dışı</tr>
 		</text>
 		<text name="universalAutoload_activate">
 			<en>Activate</en>
@@ -1164,6 +1281,7 @@ v1.0.2.0
 			<es>Activar</es>
 			<br>Ativar</br>
 			<cs>激活</cs>
+			<tr>Etkinleştir</tr>
 		</text>
 		<text name="universalAutoload_deactivate">
 			<en>Deactivate</en>
@@ -1176,6 +1294,8 @@ v1.0.2.0
 			<es>Desactivar</es>
 			<br>Desativar</br>
 			<cs>停用</cs>
+			<tr>Devre dışı bırak</tr>
+
 		</text>
 		<text name="universalAutoload_materialType">
 			<en>Material type</en>
@@ -1188,6 +1308,7 @@ v1.0.2.0
 			<es>Tipo de material</es>
 			<br>Tipo de material</br>
 			<cs>材料类型</cs>
+			<tr>Malzeme Türü</tr>
 		</text>
 		<text name="universalAutoload_containerType">
 			<en>Container type</en>
@@ -1200,6 +1321,7 @@ v1.0.2.0
 			<es>Tipo de contenedor</es>
 			<br>Tipo de contêiner</br>
 			<cs>容器类型</cs>
+			<tr>Palet Türü</tr>
 		</text>
 		<text name="universalAutoload_ALL">
 			<en>All</en>
@@ -1212,6 +1334,7 @@ v1.0.2.0
 			<es>Cualquiera</es>
 			<br>Todos</br>
 			<cs>全部</cs>
+			<tr>Hepsi</tr>
 		</text>
 		<text name="universalAutoload_LIQUID_TANK">
 			<en>IBC Tank</en>
@@ -1224,6 +1347,7 @@ v1.0.2.0
 			<es>Palé de líquido</es>
 			<br>Tanque líquido IBC</br>
 			<cs>IBC罐</cs>
+			<tr>Sıvı Tankı</tr>
 		</text>
 		<text name="universalAutoload_EURO_PALLET">
 			<en>Euro Pallet</en>
@@ -1236,6 +1360,7 @@ v1.0.2.0
 			<es>Palé</es>
 			<br>Euro Pallet</br>
 			<cs>欧式托盘</cs>
+			<tr>Euro Palet</tr>
 		</text>
 		<text name="universalAutoload_PIONEER_PALLET">
 			<en>Pioneer Pallet</en>
@@ -1248,6 +1373,7 @@ v1.0.2.0
 			<es>Palé Pioneer</es>
 			<br>Pioneer Pallet</br>
 			<cs>Pioneer Pallet</cs>
+			<tr>Palet</tr>
 		</text>
 		<text name="universalAutoload_BIGBAG_PALLET">
 			<en>Bigbag Pallet</en>
@@ -1260,6 +1386,7 @@ v1.0.2.0
 			<es>Palé de sacos grandes</es>
 			<br>Bigbag Pallet</br>
 			<cs>大袋托盘</cs>
+			<tr>Büyük Çuval Paleti</tr>
 		</text>
 		<text name="universalAutoload_BIGBAG">
 			<en>Bigbag</en>
@@ -1272,6 +1399,7 @@ v1.0.2.0
 			<es>Saco grande</es>
 			<br>Bigbag</br>
 			<cs>大袋</cs>
+			<tr>Büyük Çuval</tr>
 		</text>
 		<text name="universalAutoload_POTATOBOX">
 			<en>Potato Box</en>
@@ -1284,6 +1412,7 @@ v1.0.2.0
 			<es>Caja de patatas</es>
 			<br>Caixa de batatas</br>
 			<cs>马铃薯箱</cs>
+			<tr>Patates Sandığı</tr>
 		</text>
 		<text name="universalAutoload_BALE">
 			<en>Bale</en>
@@ -1296,6 +1425,7 @@ v1.0.2.0
 			<es>Paca</es>
 			<br>Fardo</br>
 			<cs>捆包</cs>
+			<tr>Balya</tr>
 		</text>
 		<text name="universalAutoload_ROUND_BALE">
 			<en>Round bale</en>
@@ -1308,6 +1438,7 @@ v1.0.2.0
 			<es>Paca redonda</es>
 			<br>Fardo redondo</br>
 			<cs>圆包</cs>
+			<tr>Rulo balya</tr>
 		</text>
 		<text name="universalAutoload_SQUARE_BALE">
 			<en>Square bale</en>
@@ -1320,6 +1451,7 @@ v1.0.2.0
 			<es>Paca rectangular</es>
 			<br>fardo quadrado</br>
 			<cs>方包</cs>
+			<tr>Kare balya</tr>
 		</text>
 		<text name="universalAutoload_LOGS">
 			<en>Logs</en>
@@ -1332,6 +1464,7 @@ v1.0.2.0
 			<es>Troncos</es>
 			<br>Toros</br>
 			<cs>日志</cs>
+			<tr>Kütükler</tr>
 		</text>
 	</l10n>
 
